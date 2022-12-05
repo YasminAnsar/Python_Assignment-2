@@ -52,12 +52,13 @@ user_values()
 ###########################################################################################################
 import string  #IMPORT STRING MODULE
 import re     #IMPORT FOR REGULAR EXPRESSION module
-def string_input():
-    mystring = str(input("Enter the text string: "))
+mystring = str(input("Enter the text string: "))
+print(f"Orignal string: {mystring}")
+def string_input(mystring):
     regex = re.compile('[%s]' % re.escape(string.punctuation))
     new_string = regex.sub(u'', mystring)
     return list(new_string.split())
-string_input()
+string_input(mystring)
 ##########################################################################################################
 #### Question-#4
 ##########################################################################################################
