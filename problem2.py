@@ -56,7 +56,7 @@ def string_input():
     mystring = str(input("Enter the text string: "))
     regex = re.compile('[%s]' % re.escape(string.punctuation))
     new_string = regex.sub(u'', mystring)
-    return new_string
+    return list(new_string.split())
 string_input()
 ##########################################################################################################
 #### Question-#4
