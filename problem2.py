@@ -59,6 +59,16 @@ def string_input(mystring):
     new_string = regex.sub(u'', mystring)
     return list(new_string.split())
 string_input(mystring)
+######################################################
+#Alternative solution
+######################################################
+import re
+mystring = input("Enter the text string: ")
+print(f"The original string is: {mystring}")
+def extractWords(mystring):
+    wordsList = re.findall(r'\w+', mystring)
+    print (f"The list of words is: {wordsList}")
+extractWords(mystring)
 ##########################################################################################################
 #### Question-#4
 ##########################################################################################################
